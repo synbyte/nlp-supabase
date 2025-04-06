@@ -7,28 +7,28 @@ export const Header = ({ handleClear }: { handleClear: () => void }) => {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="flex items-center justify-between mb-6">
+    <div className="flex justify-between items-center mb-6">
       <h1
-        className="text-2xl sm:text-3xl font-bold text-foreground flex items-center cursor-pointer"
+        className="flex items-center text-2xl font-bold cursor-pointer sm:text-3xl text-foreground"
         onClick={() => handleClear()}
       >
-        Natural Language PostgreSQL
+        GivAI - Talk with your data
       </h1>
-      <div className="flex items-center justify-center space-x-2">
+      <div className="flex justify-center items-center space-x-2">
         <Button
           variant="ghost"
           size="icon"
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
         >
           {theme === "dark" ? (
-            <Moon className="h-5 w-5" />
+            <Moon className="w-5 h-5" />
           ) : (
-            <Sun className="h-5 w-5" />
+            <Sun className="w-5 h-5" />
           )}
           <span className="sr-only">Toggle theme</span>
         </Button>
         <div className="hidden sm:block">
-          <DeployButton />
+
         </div>
       </div>
     </div>

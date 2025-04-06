@@ -8,53 +8,27 @@ export const SuggestedQueries = ({
 }) => {
   const suggestionQueries = [
     {
-      desktop: "Compare count of unicorns in SF and NY over time",
+      desktop: "Who are my top five donors?",
       mobile: "SF vs NY",
     },
     {
-      desktop: "Compare unicorn valuations in the US vs China over time",
+      desktop: "When was the last time X made a donation?",
       mobile: "US vs China",
     },
     {
-      desktop: "Countries with highest unicorn density",
+      desktop: "How many donations have been made in the last 2 months?",
       mobile: "Top countries",
     },
     {
       desktop:
-        "Show the number of unicorns founded each year over the past two decades",
+        "Show me the last 20 donations.",
       mobile: "Yearly count",
     },
     {
-      desktop: "Display the cumulative total valuation of unicorns over time",
+      desktop: "Show me all the donations X made this month.",
       mobile: "Total value",
     },
-    {
-      desktop:
-        "Compare the yearly funding amounts for fintech vs healthtech unicorns",
-      mobile: "Fintech vs health",
-    },
-    {
-      desktop: "Which cities have with most SaaS unicorns",
-      mobile: "SaaS cities",
-    },
-    {
-      desktop: "Show the countries with highest unicorn density",
-      mobile: "Dense nations",
-    },
-    {
-      desktop:
-        "Show the number of unicorns (grouped by year) over the past decade",
-      mobile: "Decade trend",
-    },
-    {
-      desktop:
-        "Compare the average valuation of AI companies vs. biotech companies",
-      mobile: "AI vs biotech",
-    },
-    {
-      desktop: "Investors with the most unicorns",
-      mobile: "Top investors",
-    },
+    
   ];
 
   return (
@@ -64,9 +38,9 @@ export const SuggestedQueries = ({
       animate={{ opacity: 1 }}
       layout
       exit={{ opacity: 0 }}
-      className="h-full overflow-y-auto"
+      className="overflow-y-auto h-full"
     >
-      <h2 className="text-lg sm:text-xl font-semibold text-foreground mb-4">
+      <h2 className="mb-4 text-lg font-semibold sm:text-xl text-foreground">
         Try these queries:
       </h2>
       <div className="flex flex-wrap gap-2">

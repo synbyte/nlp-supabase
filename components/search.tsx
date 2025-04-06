@@ -23,18 +23,18 @@ export const Search = ({
       }}
       className="mb-6"
     >
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <div className="flex flex-col items-stretch space-y-4 sm:flex-row sm:items-center sm:space-y-0 sm:space-x-4">
         <div className="relative flex-grow">
           <Input
             type="text"
-            placeholder="Ask about startup unicorns..."
+            placeholder="What would you like to know?"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="pr-10 text-base"
           />
           <SearchIcon className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
         </div>
-        <div className="flex sm:flex-row items-center justify-center gap-2">
+        <div className="flex gap-2 justify-center items-center sm:flex-row">
           {submitted ? (
             <Button
               type="button"

@@ -82,15 +82,15 @@ export default function Page() {
   };
 
   return (
-    <div className="bg-neutral-50 dark:bg-neutral-900 flex items-start justify-center p-0 sm:p-8">
-      <div className="w-full max-w-4xl min-h-dvh sm:min-h-0 flex flex-col ">
+    <div className="flex justify-center items-start p-0 bg-neutral-50 dark:bg-neutral-900 sm:p-8">
+      <div className="flex flex-col w-full max-w-4xl min-h-dvh sm:min-h-0">
         <motion.div
-          className="bg-card rounded-xl sm:border sm:border-border flex-grow flex flex-col"
+          className="flex flex-col flex-grow rounded-xl bg-card sm:border sm:border-border"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          <div className="p-6 sm:p-8 flex flex-col flex-grow">
+          <div className="flex flex-col flex-grow p-6 sm:p-8">
             <Header handleClear={handleClear} />
             <Search
               handleClear={handleClear}
@@ -125,8 +125,8 @@ export default function Page() {
                         />
                       )}
                       {loading ? (
-                        <div className="h-full absolute bg-background/50 w-full flex flex-col items-center justify-center space-y-4">
-                          <Loader2 className="h-12 w-12 animate-spin text-muted-foreground" />
+                        <div className="flex absolute flex-col justify-center items-center space-y-4 w-full h-full bg-background/50">
+                          <Loader2 className="w-12 h-12 animate-spin text-muted-foreground" />
                           <p className="text-foreground">
                             {loadingStep === 1
                               ? "Generating SQL query..."
@@ -134,7 +134,7 @@ export default function Page() {
                           </p>
                         </div>
                       ) : results.length === 0 ? (
-                        <div className="flex-grow flex items-center justify-center">
+                        <div className="flex flex-grow justify-center items-center">
                           <p className="text-center text-muted-foreground">
                             No results found.
                           </p>
